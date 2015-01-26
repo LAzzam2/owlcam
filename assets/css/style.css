@@ -337,9 +337,9 @@ body {
 /* line 233, ../sass/style.scss */
 #socialNav {
   position: absolute;
-  top: -45px;
+  bottom: -35px;
   left: 0px;
-  width: 225px;
+  width: 415px;
   -moz-transform: translate(0%, 0);
   -o-transform: translate(0%, 0);
   -ms-transform: translate(0%, 0);
@@ -357,12 +357,39 @@ body {
 }
 
 /* line 246, ../sass/style.scss */
+.socialIcons {
+  position: absolute;
+  top: -25px;
+  right: 0px;
+}
+/* line 250, ../sass/style.scss */
+.socialIcons ul li {
+  float: left;
+  margin-right: 10px;
+  width: 20px;
+  opacity: .6;
+  -webkit-transition: all 250ms ease-out;
+  -moz-transition: all 250ms ease-out;
+  -ms-transition: all 250ms ease-out;
+  -o-transition: all 250ms ease-out;
+  transition: all 250ms ease-out;
+}
+/* line 257, ../sass/style.scss */
+.socialIcons ul li:hover {
+  opacity: 1;
+}
+/* line 260, ../sass/style.scss */
+.socialIcons ul li:last-child {
+  margin-right: 5px;
+}
+
+/* line 265, ../sass/style.scss */
 #companyLogos {
   background-color: white;
 }
 
 @media (max-width: 959px) {
-  /* line 251, ../sass/style.scss */
+  /* line 270, ../sass/style.scss */
   #stream {
     -webkit-transition: all 250ms ease-out;
     -moz-transition: all 250ms ease-out;
@@ -370,22 +397,22 @@ body {
     -o-transition: all 250ms ease-out;
     transition: all 250ms ease-out;
   }
-  /* line 253, ../sass/style.scss */
+  /* line 272, ../sass/style.scss */
   #stream .wrap {
     width: 90%;
     margin: 150px auto;
     max-width: 960px;
   }
-  /* line 256, ../sass/style.scss */
+  /* line 275, ../sass/style.scss */
   #stream .wrap > iframe, #stream .wrap #tlkio {
     display: inline-block;
   }
-  /* line 259, ../sass/style.scss */
+  /* line 278, ../sass/style.scss */
   #stream .wrap > iframe {
     width: 100%;
     margin-bottom: 10px;
   }
-  /* line 263, ../sass/style.scss */
+  /* line 282, ../sass/style.scss */
   #stream .wrap #tlkio {
     width: 100%;
     background-color: whitesmoke;

@@ -232,8 +232,8 @@ body {
 
 #socialNav {
 	position: absolute;
-	top: -45px; left: 0px;
-	width: 225px;
+	bottom: -35px; left: 0px;
+	width: 415px;
 	@include transform(translate(0%,0));
 	iframe:first-child {
 		width: 80px;
@@ -241,6 +241,25 @@ body {
 	iframe {
 		height: 23px;
 		float: left;
+	}
+}
+.socialIcons {
+	position: absolute;
+	top: -25px; right: 0px;
+	ul {
+		li {
+			float: left;
+			margin-right: 10px;
+			width: 20px;
+			opacity: .6;
+			@include transition(all, 250ms, ease-out);
+		}
+		li:hover {
+			opacity: 1;
+		}
+		li:last-child {
+			margin-right: 5px;
+		}
 	}
 }
 #companyLogos {
