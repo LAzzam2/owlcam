@@ -1,7 +1,7 @@
 $( document ).ready(function() {
 
 
-  $('#content iframe').height($('#content').height());
+  $('#stream iframe, #tlkio').height($('#stream iframe').width()*(.66));
 
 window.onscroll = function (event) {
 	var topDistance = $("#headerWrap").offset().top;
@@ -23,6 +23,10 @@ function goToByScroll(id){
     $.each(divs, function(key, value){
       console.log(value, id);
       if($(this).attr('id') == id){
+        $('#stream').css({
+          opacity: 0,
+          pointerEvents: 'none'
+        });
         $(this).parent().toggleClass('show');
         $(this).toggleClass('showContent');
         $('#headerWrap').addClass('hide');
@@ -46,15 +50,17 @@ $(".close, #background").click(function(e) {
   if($('#content').hasClass('show')){
     $('#content').removeClass('show');   
     $('#content>div').removeClass('showContent');
-    $('#headerWrap').removeClass('hide');    
+    $('#headerWrap').removeClass('hide');
+    $('#stream').css({
+      opacity: 1,
+      pointerEvents: 'inherit'
+    });    
     }
 });
 
 resizeVideo();
 function resizeVideo(){
-	var streamHeight = $('#videoStream').width() / (16 / 9) ;
-	$('#videoStream').height(streamHeight + 'px')	
-  $('#content iframe').height($('#content').height());
+  $('#stream iframe, #tlkio').height($('#stream iframe').width()*(.66));
 };
 
 $( window ).resize(function() {

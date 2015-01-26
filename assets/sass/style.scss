@@ -23,25 +23,35 @@ $abel: 'Abel', sans-serif;
     transition: $transition-property $transition-time $method;
 }
 
+body {
+	background: url('../img/owlcamBg.jpg')no-repeat center center fixed;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+#header {
+	display: inline-block;
+}
+
 #headerWrap, #content, #gallery, #story, #faq {
 	@include transition(all, 500ms, ease-out);
 	border: 0px solid white;
 }
 #headerWrap {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	@include transform(translate(-50%,-50%));
+	position: fixed;
+	top: 0px; left: 0px;
 	width: 100%;
-	max-width: 800px;
+	margin: auto;
 	z-index: 50;
 	opacity: 1;
 	#logo {
-		width: 60%;
+		width: 150px;
 		margin: 10px auto 10px auto;
 		background: url('../assets/img/logo.png');
-		border-bottom: 2px solid rgba(255,255,255,.3);
 		padding-bottom: 20px;
+		position: absolute;
+		top: 0; left: 0;
 		p {
 			color: white;
 			text-align: center;
@@ -79,13 +89,33 @@ $abel: 'Abel', sans-serif;
 	top: 0; left: 0;
 	height: 100%; width: 100%;
 }
+
+#stream {
+	@include transition(all, 250ms, ease-out);
+	.wrap {
+		width: 80%; margin: 150px auto;
+		max-width: 960px;
+		position: relative;
+		>iframe, #tlkio {
+			display: inline-block;
+		}
+	>iframe {
+		width: 65%;
+	}
+	#tlkio {
+		width: 34%;
+		background-color: whitesmoke;
+		overflow: hidden;
+	}
+	}
+}
+
 #content {
 	position: absolute;
 	top: 50%; left: 50%;
 	@include transform(translate(-50%,-50%));
 	color: white;
 	padding: 15px;
-	border: 1px solid white;
 	opacity: 0;
 	pointer-events: none;
 	height: 100%;
@@ -95,10 +125,6 @@ $abel: 'Abel', sans-serif;
 	overflow: scroll;
 	opacity: 0;
 	background-color: rgba(255,255,255,.1);
-	iframe {
-		height: 100%;
-		width: 100%;
-	}
 	#story, #gallery, #faq {
 		opacity: 0;
 		pointer-events: none;
@@ -153,10 +179,10 @@ $abel: 'Abel', sans-serif;
 }
 #navRight {
 	margin: auto;
-	width: 100%;
-	max-width: 800px;
 	text-align: center;
 	padding-top: 15px;
+	position: absolute;
+	top: 25px; right: 25px;
 	a {
 		margin-right: 5px;
 		letter-spacing: 1px;
@@ -206,10 +232,9 @@ $abel: 'Abel', sans-serif;
 
 #socialNav {
 	position: absolute;
-	bottom: 35px;
-	left: 50%;
+	top: -45px; left: 0px;
 	width: 225px;
-	@include transform(translate(-50%,0));
+	@include transform(translate(0%,0));
 	iframe:first-child {
 		width: 80px;
 	}
@@ -218,11 +243,28 @@ $abel: 'Abel', sans-serif;
 		float: left;
 	}
 }
+#companyLogos {
+	background-color: white;
+}
 
-@media (max-width: 600px) {
-	#headerWrap {
-		#logo {
-			width: 90%;
-		}
+@media (max-width: 959px) {
+	#stream {
+	@include transition(all, 250ms, ease-out);
+	.wrap {
+		width: 90%; margin: 150px auto;
+		max-width: 960px;
+		>iframe, #tlkio {
+		display: inline-block;
 	}
+	>iframe {
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	#tlkio {
+		width: 100%;
+		background-color: whitesmoke;
+		overflow: hidden;
+	}
+	}
+}
 }
