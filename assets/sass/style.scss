@@ -22,6 +22,8 @@ $abel: 'Abel', sans-serif;
     -o-transition: $transition-property $transition-time $method;
     transition: $transition-property $transition-time $method;
 }
+html, body {
+}
 
 body {
 	background: url('../img/owlcamBg.jpg')no-repeat center center fixed;
@@ -89,21 +91,25 @@ body {
 	top: 0; left: 0;
 	height: 100%; width: 100%;
 }
+.gridlogos {
+	max-width: 960px;
+	margin: auto;
+}
 
 #stream {
 	@include transition(all, 250ms, ease-out);
 	.wrap {
 		width: 80%; margin: 150px auto;
-		max-width: 960px;
+		max-width: 1125px;
 		position: relative;
 		>iframe, #tlkio {
 			display: inline-block;
 		}
 	>iframe {
-		width: 65%;
+		width: 71%;
 	}
 	#tlkio {
-		width: 34%;
+		width: 28%;
 		background-color: whitesmoke;
 		overflow: hidden;
 	}
@@ -238,6 +244,8 @@ body {
 	position: absolute;
 	top: -55px; left: 0px;
 	width: 415px;
+	bottom: auto;
+	height: 0px;
 	@include transform(translate(0%,0));
 	iframe:first-child {
 		width: 80px;
@@ -249,7 +257,7 @@ body {
 }
 .socialIcons {
 	position: absolute;
-	top: -25px; right: 0px;
+	top: -31px; right: 0px;
 	ul {
 		li {
 			float: left;
@@ -262,7 +270,7 @@ body {
 			opacity: 1;
 		}
 		li:last-child {
-			margin-right: 5px;
+			margin-right: 8px;
 		}
 	}
 }
@@ -301,8 +309,34 @@ body {
 			bottom: auto;
 		}
 	}
-	.socialIcons{
-		display: none;
+	#headerWrap {
+		position: inherit;
+		#logo {
+			left: 50%;
+			@include transform(translate(-50%,0));
+		}
 	}
-
+	#navRight {
+		width: 260px;
+		top: 85px;
+		right: 50%;
+		@include transform(translate(50%,0));
+	}
+	#twitter-widget-0 {
+		margin-left: 5px;
+		width: 85px !important;
+	}
+	#socialNav {
+		width: 100%;
+	}
+	.socialIcons {
+		ul{
+			li:last-child {
+				margin-right: 0px;
+			}
+		}
+	}
+	#online {
+		width: 100%;
+	}
 }

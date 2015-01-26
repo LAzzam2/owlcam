@@ -261,11 +261,12 @@ footer {
 	-moz-transition: height .5s;
 	color: black;
 	text-align: center;
-	background-color: rgba(0,0,0,0.78);
+	background-color: rgba(0,0,0,1);
+	position: fixed;
+	bottom: 0px;
 }
 #companyLogos {
 	width: 100%;
-	max-width: 960px;
 	margin: 0 auto;
 	padding: 10px;
 }

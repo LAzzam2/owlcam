@@ -63,7 +63,7 @@ resizeVideo();
 function resizeVideo(){
   $('#stream iframe, #tlkio').height($('#stream iframe').width()*(.66));
   $('#gallery iframe').height($('#content').height());
-  $('#socialNav').css('bottom','-35px');
+  $('#socialNav').css('bottom','auto');
   if(window.innerWidth <= 959){
     $('#online').css('top',$('#stream iframe').height()+10);
   }else if(window.innerWidth > 959){
