@@ -1,7 +1,8 @@
 $( document ).ready(function() {
 
 
-  $('#stream iframe, #tlkio, #gallery iframe').height($('#stream iframe').width()*(.66));
+  $('#stream iframe, #tlkio').height($('#stream iframe').width()*(.66));
+  $('#gallery iframe').height($('#content').height());
 
 window.onscroll = function (event) {
 	var topDistance = $("#headerWrap").offset().top;
@@ -60,7 +61,14 @@ $(".close, #background").click(function(e) {
 
 resizeVideo();
 function resizeVideo(){
-  $('#stream iframe, #tlkio, #gallery iframe').height($('#stream iframe').width()*(.66));
+  $('#stream iframe, #tlkio').height($('#stream iframe').width()*(.66));
+  $('#gallery iframe').height($('#content').height());
+  $('#socialNav').css('bottom','-35px');
+  if(window.innerWidth <= 959){
+    $('#online').css('top',$('#stream iframe').height()+10);
+  }else if(window.innerWidth > 959){
+    $('#online').css('top','auto');
+  }
 };
 
 $( window ).resize(function() {

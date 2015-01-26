@@ -132,6 +132,10 @@ body {
 		p {
 			line-height: 1.3em;
 		}
+		iframe {
+			width: 100%;
+			height: 100%;
+		}
 	}
 	#faq {
 		p:nth-child(even){
@@ -232,7 +236,7 @@ body {
 
 #socialNav {
 	position: absolute;
-	bottom: -35px; left: 0px;
+	top: -55px; left: 0px;
 	width: 415px;
 	@include transform(translate(0%,0));
 	iframe:first-child {
@@ -265,26 +269,40 @@ body {
 #companyLogos {
 	background-color: white;
 }
+#online {
+	position: absolute;
+	bottom: -35px;
+	left: 0;
+	color: white;
+	outline-color: white;
+}
 
 @media (max-width: 959px) {
 	#stream {
 	@include transition(all, 250ms, ease-out);
-	.wrap {
-		width: 90%; margin: 150px auto;
-		max-width: 960px;
-		>iframe, #tlkio {
-		display: inline-block;
+		.wrap {
+			width: 90%; margin: 150px auto;
+			max-width: 960px;
+			>iframe, #tlkio {
+			display: inline-block;
+		}
+		>iframe {
+			width: 100%;
+			margin-bottom: 40px;
+		}
+		#tlkio {
+			width: 100%;
+			background-color: whitesmoke;
+			overflow: hidden;
+			padding: 20px;
+		}
+		}
+		#online {
+			bottom: auto;
+		}
 	}
-	>iframe {
-		width: 100%;
-		margin-bottom: 10px;
+	.socialIcons{
+		display: none;
 	}
-	#tlkio {
-		width: 100%;
-		background-color: whitesmoke;
-		overflow: hidden;
-		padding: 20px;
-	}
-	}
-}
+
 }
