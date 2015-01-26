@@ -1,7 +1,7 @@
 $( document ).ready(function() {
 
 
-  $('#stream iframe, #tlkio').height($('#stream iframe').width()*(.66));
+  $('#stream iframe, #tlkio, #gallery iframe').height($('#stream iframe').width()*(.66));
 
 window.onscroll = function (event) {
 	var topDistance = $("#headerWrap").offset().top;
@@ -60,7 +60,7 @@ $(".close, #background").click(function(e) {
 
 resizeVideo();
 function resizeVideo(){
-  $('#stream iframe, #tlkio').height($('#stream iframe').width()*(.66));
+  $('#stream iframe, #tlkio, #gallery iframe').height($('#stream iframe').width()*(.66));
 };
 
 $( window ).resize(function() {
